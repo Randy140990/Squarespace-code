@@ -1,0 +1,42 @@
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: pink; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Loading Screen Animations */
+@keyframes shrinkAndFadeImage {
+    from {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    to {
+        transform: scale(0.1); 
+        opacity: 0; 
+    }
+}
+
+/* Loading Screen Image */
+#loading-screen img {
+    max-width: 120px;
+    max-height: 120px;
+    animation: shrinkAndFadeImage 2s forwards;
+}
+
+/* Loading Screen Text */
+#loading-screen p {
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
